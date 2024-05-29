@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <!-- icon link -->
+    <link rel="icon" href="assets/img/Blackvariant-Button-Ui-Requests-5-ToDo-List.1024.png">
+    <!-- google fonts  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Noto+Sans+Syloti+Nagri&amp;family=Source+Sans+Pro:wght@300;400;600;700;900&amp;display=swap"
+        rel="stylesheet">
+    <!-- font awosome link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main Style Sheet  -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <nav class="fixed-top">
+        <div class="container-fluid">
+            <div class="container  align-items-center gap-3 p-2 d-flex">
+                <h1>Daily Task</h1>
+                <div class="mx-auto  w-50 ">
+                    <nav class="navbar  ">
+                        <form class=" ">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i
+                                        class="fa-brands fa-searchengin"></i></span>
+                                <input type="text" oninput="searchTask()" id="search" class="form-control " placeholder="Search Tasks.."
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                                  
+                            </div>
+
+                        </form>
+                    </nav>
+                </div>
+             
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header class="mt-2">
+            <div class="container mt-5 mt-sm-4  borderr p-2  justify-content-between d-flex ">
+                <div class="d-flex gap-3 ">
+                    <i class="bi  h-text fs-3 bi-stars"></i>
+                    <h4 class="h-text my-auto">All of Tasks</h4>
+                </div>
+                <div class="  gap-4 d-flex">
+                    <div class="d-flex gap-4 icons">
+                        <i id="grid" class="fa-solid border  icon  fs-4 p-2 fa-grip-vertical"></i>
+                        <i id="bars" class="fa-solid  icon  fs-4 p-2 fa-bars"></i>
+                    </div>
+                    <i id="Sunicon" class="fa-solid  icon fa-sun border fs-4 p-2"></i>
+                    <i id="Moonicon" class="fa-solid d-none icon fa-moon border fs-4 p-2"></i>
+
+                </div>
+            </div>
+        </header>
+        <div class=" d-flex gap-3  flex-column justify-content-center align-items-center my-5 p-3">
+          
+            <button id="addBtn"  class="btnn"> <i class="fa-solid fa-file"></i> Add New Task </button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="containerone" class="col-md-6 col-lg-4  mb-3  ">
+                    <div class="inner border">
+                        <header class="d-flex align-items-center justify-content-between px-3 py-3">
+                            <h4>Next Up</h4>
+                            <span id="counterone" class="">0</span>
+                        </header>
+                        <div id="nextContainer" class="p-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="containertwo" class="col-md-6 col-lg-4  mb-3  ">
+                    <div class="inner border">
+                        <header class="d-flex align-items-center justify-content-between px-3 py-3">
+                            <h4>In Progress </h4>
+                            <span id="countertwo">0</span>
+                        </header>
+                        <div id="inProgressContainer" class=" p-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="containerthree" class="col-md-6 col-lg-4  mb-3  ">
+                    <div class="inner border">
+                        <header class="d-flex align-items-center justify-content-between px-3 py-3">
+                            <h4>Done </h4>
+                            <span id="counterthree">0</span>
+                        </header>
+                        <div id="doneContainer" class=" p-3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="my-modal d-none bg-black bg-opacity-75 position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center" id="modal">
+        <div class="container  ">
+            <div class=" d-flex justify-content-end my-3">
+                <i  id="closebtn"  class="fa-regular fs-2 text-white fa-circle-xmark"></i>
+            </div>
+          <div class="form-floating ">
+            <select class="form-select mb-3" id="status" aria-label="Floating label select example">
+              <option value="nextUp" selected="">Next Up</option>
+              <option value="inProgress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+            <label for="status">Select Task Status</label>
+          </div>
+  
+          <div class="form-floating">
+            <select class="form-select mb-3" id="category" aria-label="Floating label select example">
+              <option value="education" selected="">Education</option>
+              <option value="health">Health &amp; Fitness</option>
+              <option value="finance">Finance</option>
+              <option value="productivity">Productivity</option>
+            </select>
+            <label for="category">Select Category</label>
+          </div>
+  
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="title" placeholder="Task Title">
+            <label for="title">Task Title</label>
+          </div>
+  
+          <p class="alert alert-danger d-none">
+            Task Title must be at least 3 characters &amp; not ending with a space
+          </p>
+  
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="description" placeholder="Task Description"></textarea>
+            <label for="description">Task Description</label>
+          </div>
+  
+          <p class="alert alert-danger d-none">
+            Description must contain between 5 and 100 characters
+          </p>
+  
+          <p class="text-end">
+            <span id="remainingCounter">100</span> remaining character
+          </p>
+          <button class="btn btn-new-task btnn w-100 fw-semibold" id="addTask">
+            Add Task
+          </button>
+          <button class="btn btn-new-task d-none btnn w-100 fw-semibold" id="updateBtn">
+            Update Task 
+          </button>
+        </div>
+      </div>
+    <footer class="fixed-bottom">
+        <div class="container py-3 text-center">
+            <p class="copyright m-0 fs-6 fw-bold">
+                Made with <i class="fa-solid fa-heart fa-beat mx-2"></i> by
+                <a href="https://www.linkedin.com/in/usamaali-dev/"
+                    class="text-decoration-none fw-normal d-inline-block" target="_blank">Hady Ayman</a>
+            </p>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

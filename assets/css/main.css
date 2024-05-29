@@ -1,0 +1,186 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --main-black: #0d1117;
+    --sec-black: #161b22;
+    --finance-color: #30a277;
+    --health-color: #fb882e;
+    --productivity-color: #fc3637;
+    --education-color: #2e4acd;
+    --mid-gray: #474a4e;
+    --gray-color: #dadada;
+    --text-color: #a5a6a7;
+  }
+
+  .text
+{
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.nav-container
+{
+    gap: 15rem;
+}
+.container-fluid .navbar
+{
+    width: 100%;
+}
+.container-fluid .navbar form 
+{
+    width: 100%;
+}
+.container-fluid
+{
+    background-color: var(--sec-black);
+}
+.container-fluid h1
+{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+}
+main 
+{
+    background-color: var(--main-black);
+    padding-block: 4.375rem;
+    min-height: 100vh;
+}
+.icon 
+{
+    color: var(--text-color);
+    background-color: var(--sec-black);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.h-text 
+{
+    color: var(--text-color);
+}
+.icon:hover 
+{
+    background-color: var(--mid-gray);
+}
+.borderr
+{
+    border-top: solid 1px;
+    border-top-color:#2a2a2a ;
+    border-bottom: solid 1px;
+    border-bottom-color:#2a2a2a ;
+ 
+}
+.icons 
+{
+ background-color: var(--sec-black);   
+}
+.btnn 
+{
+    padding: 15px;
+    border: solid 3px ;
+    border-radius: 10px;
+    color:#222 ;
+    background-color:#ffcb42 ;
+    border-color:#efbb37 ;
+}
+
+.btnn:hover
+{
+    color:#222 ;
+    background-color:#e0aa22 ;
+    border-color:#e0aa22;
+}
+.inner header span 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec-black);
+    padding-inline: 6px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+.inner header
+{
+    background-color: var(--main-black) ;
+    color: var(--text-color);
+}
+.inner
+{
+    background-color: var(--sec-black);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+
+}
+.fixed-bottom 
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: var(--sec-black);
+    color: var(--text-color);
+} 
+.fixed-bottom a 
+{
+    color: var(--text-color);
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.text 
+{
+    color: var(--text-color);
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+}   
+.form-control:focus
+{
+    box-shadow: none;
+    background-color: white;
+    border-color: white;
+}
+.my-modal
+{
+    z-index: 99999999999999999999;
+    
+}
+.fa-circle-xmark
+{
+    cursor: pointer;
+}
+.task 
+{
+    background-color: var(--main-black);
+    padding: 15px;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+}
+.category
+{
+    width: fit-content;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #f1f1f1;
+    margin-bottom: 15px;
+    background-color: #2e4acd;
+}
+.bi-trash-fill , .bi-pencil-square
+{
+    cursor: pointer;
+}
