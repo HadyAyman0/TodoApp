@@ -32,15 +32,15 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i
                                         class="fa-brands fa-searchengin"></i></span>
-                                <input type="text" oninput="searchTask()" id="search" class="form-control " placeholder="Search Tasks.."
-                                    aria-label="Username" aria-describedby="basic-addon1">
-                                  
+                                <input type="text" oninput="searchTask()" id="search" class="form-control "
+                                    placeholder="Search Tasks.." aria-label="Username" aria-describedby="basic-addon1">
+
                             </div>
 
                         </form>
                     </nav>
                 </div>
-             
+
             </div>
         </div>
     </nav>
@@ -63,8 +63,8 @@
             </div>
         </header>
         <div class=" d-flex gap-3  flex-column justify-content-center align-items-center my-5 p-3">
-          
-            <button id="addBtn"  class="btnn"> <i class="fa-solid fa-file"></i> Add New Task </button>
+
+            <button id="addBtn" class="btnn"> <i class="fa-solid fa-file"></i> Add New Task </button>
         </div>
         <div class="container">
             <div class="row">
@@ -104,64 +104,65 @@
             </div>
         </div>
     </main>
-    <div class="my-modal d-none bg-black bg-opacity-75 position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center" id="modal">
+    <div class="my-modal d-none bg-black bg-opacity-75 position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center"
+        id="modal">
         <div class="container  ">
             <div class=" d-flex justify-content-end my-3">
-                <i  id="closebtn"  class="fa-regular fs-2 text-white fa-circle-xmark"></i>
+                <i id="closebtn" class="fa-regular fs-2 text-white fa-circle-xmark"></i>
             </div>
-          <div class="form-floating ">
-            <select class="form-select mb-3" id="status" aria-label="Floating label select example">
-              <option value="nextUp" selected="">Next Up</option>
-              <option value="inProgress">In Progress</option>
-              <option value="done">Done</option>
-            </select>
-            <label for="status">Select Task Status</label>
-          </div>
-  
-          <div class="form-floating">
-            <select class="form-select mb-3" id="category" aria-label="Floating label select example">
-              <option value="education" selected="">Education</option>
-              <option value="health">Health &amp; Fitness</option>
-              <option value="finance">Finance</option>
-              <option value="productivity">Productivity</option>
-            </select>
-            <label for="category">Select Category</label>
-          </div>
-  
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="title" placeholder="Task Title">
-            <label for="title">Task Title</label>
-          </div>
-  
-          <p class="alert alert-danger d-none">
-            Task Title must be at least 3 characters &amp; not ending with a space
-          </p>
-  
-          <div class="form-floating mb-3">
-            <textarea class="form-control" id="description" placeholder="Task Description"></textarea>
-            <label for="description">Task Description</label>
-          </div>
-  
-          <p class="alert alert-danger d-none">
-            Description must contain between 5 and 100 characters
-          </p>
-  
-          <p class="text-end">
-            <span id="remainingCounter">100</span> remaining character
-          </p>
-          <button class="btn btn-new-task btnn w-100 fw-semibold" id="addTask">
-            Add Task
-          </button>
-          <button class="btn btn-new-task d-none btnn w-100 fw-semibold" id="updateBtn">
-            Update Task 
-          </button>
+            <div class="form-floating ">
+                <select class="form-select mb-3" id="status" aria-label="Floating label select example">
+                    <option value="nextUp" selected="">Next Up</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="done">Done</option>
+                </select>
+                <label for="status">Select Task Status</label>
+            </div>
+
+            <div class="form-floating">
+                <select class="form-select mb-3" id="category" aria-label="Floating label select example">
+                    <option value="education" selected="">Education</option>
+                    <option value="health">Health &amp; Fitness</option>
+                    <option value="finance">Finance</option>
+                    <option value="productivity">Productivity</option>
+                </select>
+                <label for="category">Select Category</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="title" placeholder="Task Title">
+                <label for="title">Task Title</label>
+            </div>
+
+            <p class="alert alert-danger d-none">
+                Task Title must be at least 3 characters &amp; not ending with a space
+            </p>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="description" placeholder="Task Description"></textarea>
+                <label for="description">Task Description</label>
+            </div>
+
+            <p class="alert alert-danger d-none">
+                Description must contain between 5 and 100 characters
+            </p>
+
+            <p class="text-end">
+                <span id="remainingCounter">100</span> remaining character
+            </p>
+            <button class="btn btn-new-task btnn w-100 fw-semibold" id="addTask">
+                Add Task
+            </button>
+            <button class="btn btn-new-task d-none btnn w-100 fw-semibold" id="updateBtn">
+                Update Task
+            </button>
         </div>
-      </div>
+    </div>
     <footer class="fixed-bottom">
         <div class="container py-3 text-center">
             <p class="copyright m-0 fs-6 fw-bold">
                 Made with <i class="fa-solid fa-heart fa-beat mx-2"></i> by
-                <a href="https://www.linkedin.com/in/usamaali-dev/"
+                <a href="https://www.linkedin.com/in/hadyayman2020/"
                     class="text-decoration-none fw-normal d-inline-block" target="_blank">Hady Ayman</a>
             </p>
         </div>
